@@ -8,6 +8,9 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <script defer src="script.js"></script>
   <title>Frontend Mentor | E-commerce product page</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -23,68 +26,67 @@
   </style>
 </head>
 
-<body>
+<body id="body">
+  <div id="menu-movil">
+  </div>
   <main class="content">
-    <header class="menu">
-      <h3 class="name-company">sneakers</h3>
-      <nav class="links">
-        <a href="#">Collections</a>
-        <a href="#">Men</a>
-        <a href="#">Women</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-      </nav>
-      <div class="button-header">
-        <button><img class="cart" src="images/icon-cart.svg" alt=""></button>
-        <button><img src="images/image-avatar.png" alt=""></button>
-      </div>
+    <header id="menu" class="menu">
+
     </header>
-    <article class="product"></article>
-    <section class="images">
-      <img class="primary-img" src="images/image-product-1.jpg" alt="">
-      <div class="images-others">
-        <img class="select" src="images/image-product-1-thumbnail.jpg" alt="">
-        <img src="images/image-product-2-thumbnail.jpg" alt="">
-        <img src="images/image-product-3-thumbnail.jpg" alt="">
-        <img src="images/image-product-4-thumbnail.jpg" alt="">
-      </div>
-    </section>
-    <section class="text">
-      <h6>SNEAKERS COMPANY</h6>
-      <h1>Fall Limited Edition Sneakers</h1>
-      <p>
-        These low-profile sneakers are your perfect casual wear companion. Featuring a
-        durable rubber outer sole, they’ll withstand everything the weather can offer.
-      </p>
-      <div class="price">
-        <h4>$125.00</h4>
-        <p>50%</p>
-        <p>$250.00</p>
-      </div>
-      <div class="cant-buy">
-        <div>
-          <button class="less">
-            <img src="images/icon-minus.svg" alt="">
-          </button>
-          <label id="cant">0</label>
-          <button class="plus">
-            <img src="images/icon-plus.svg" alt="">
+    <div id="div-list" class="list">
+    </div>
+    <article class="product">
+      <section id="images" class="images">
+        <div class="container">
+          <img id="primary-img" class="primary-img" onclick="mostrar_modal()" src="images/image-product-1.jpg" alt="">
+        </div>
+        <div class="images-others">
+          <img id="1" class="select img" onclick="mostrar(id)" src="images/image-product-1.jpg" alt="">
+          <img id="2" class="img" onclick="mostrar(id)" src="images/image-product-2.jpg" alt="">
+          <img id="3" class="img" onclick="mostrar(id)" src="images/image-product-3.jpg" alt="">
+          <img id="4" class="img" onclick="mostrar(id)" src="images/image-product-4.jpg" alt="">
+        </div>
+      </section>
+      <section class="text">
+        <h6>SNEAKERS COMPANY</h6>
+        <h1 id="name-product">Fall Limited Edition Sneakers</h1>
+        <p class="description">
+          These low-profile sneakers are your perfect casual wear companion. Featuring a
+          durable rubber outer sole, they’ll withstand everything the weather can offer.
+        </p>
+        <div class="price">
+          <h4>$<b id="price-product">125.00</b></h4>
+          <p>50%</p>
+        </div>
+        <p class="before-price">$250.00</p>
+        <div class="cant-buy">
+          <div class="div-cant">
+            <button onclick="sub()" class="less">
+              <img src="images/icon-minus.svg" alt="">
+            </button>
+            <label class="cant" id="cant">0</label>
+            <button class="plus" onclick="add()">
+              <img src="images/icon-plus.svg" alt="">
+            </button>
+          </div>
+          <button id="cart">
+            <img src="images/icon-cart copy.svg" alt="">
+            Add to cart
           </button>
         </div>
-        <button id="cart">
-          <img src="images/icon-cart.svg" alt="">
-          Add to cart
-        </button>
-      </div>
-
-    </section>
+      </section>
+    </article>
+    <div id="toasts"></div>
     <footer class="end-text">
       <div class="attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-        Coded by <a href="#">Your Name Here</a>.
+        Coded by <a href="#">Edward David Diaz Padilla</a>.
       </div>
     </footer>
   </main>
+  <div id="modal">
+  </div>
+
 </body>
 
 </html>
